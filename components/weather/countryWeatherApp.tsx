@@ -8,8 +8,8 @@ import WeatherCountryHeader from "@/components/weather/WeatherCountryHeader"
 import WeatherCard from "@/components/weather/WeatherCard"
 import WeatherNoResults from "@/components/weather/WeatherNoResults"
 import WeatherLoading from "@/components/weather/WeatherLoading"
-// import { mockCountryData } from "@/lib/mockCountryData" 
-// import { mockCountryData } from "@/lib/data/mockCountryData" 
+import mockCountryData from "@/data/mockCountryData"
+
 
 export default function CountryWeatherApp() {
   const [searchQuery, setSearchQuery] = useState("")

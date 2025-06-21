@@ -844,3 +844,5 @@ const mockCountryData = {
     ],
   },
 }
+
+export default mockCountryData;
