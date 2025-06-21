@@ -13,7 +13,7 @@ import mockCountryData from "@/data/mockCountryData"
 
 export default function CountryWeatherApp() {
   const [searchQuery, setSearchQuery] = useState("")
-  const [selectedCountry, setSelectedCountry] = useState<string | null>(null)
+  const [setSelectedCountry] = useState<string | null>(null)
   const [countryData, setCountryData] = useState<any>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [searchResults, setSearchResults] = useState<string[]>([])

@@ -22,7 +22,7 @@ export default function WeatherNoResults({
       ) : (
         <>
           <h3 className="text-xl font-semibold text-white mb-2">Country Not Found</h3>
-          <p className="text-slate-300 mb-4">We couldn't find weather data for that country. Try searching for:</p>
+          <p className="text-slate-300 mb-4">We couldn&apos;t find weather data for that country. Try searching for:</p>
           <div className="flex flex-wrap justify-center gap-2">
             {availableCountries.slice(0, 5).map((country) => (
               <Badge
