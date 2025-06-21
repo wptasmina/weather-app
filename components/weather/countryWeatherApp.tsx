@@ -10,10 +10,9 @@ import WeatherNoResults from "@/components/weather/WeatherNoResults"
 import WeatherLoading from "@/components/weather/WeatherLoading"
 import mockCountryData from "@/data/mockCountryData"
 
-
 export default function CountryWeatherApp() {
   const [searchQuery, setSearchQuery] = useState("")
-  const [setSelectedCountry] = useState<string | null>(null)
+  const [selectedCountry, setSelectedCountry] = useState<string | null>(null)
   const [countryData, setCountryData] = useState<any>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [searchResults, setSearchResults] = useState<string[]>([])
@@ -31,7 +30,9 @@ export default function CountryWeatherApp() {
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1500))
 
-    const country = availableCountries.find((c) => c.toLowerCase().includes(searchQuery.toLowerCase()))
+    const country = availableCountries.find((c) =>
+      c.toLowerCase().includes(searchQuery.toLowerCase())
+    )
 
     if (country) {
       setSelectedCountry(country)
@@ -50,7 +51,9 @@ export default function CountryWeatherApp() {
     setSearchQuery(value)
 
     if (value.length > 0) {
-      const filtered = availableCountries.filter((country) => country.toLowerCase().includes(value.toLowerCase()))
+      const filtered = availableCountries.filter((country) =>
+        country.toLowerCase().includes(value.toLowerCase())
+      )
       setSearchResults(filtered.slice(0, 5))
       setShowSearchResults(true)
     } else {
@@ -61,7 +64,6 @@ export default function CountryWeatherApp() {
   const handleSelectCountry = (country: string) => {
     setSearchQuery(country)
     setShowSearchResults(false)
-    // Auto-search when selecting from dropdown
     setTimeout(() => {
       const form = document.querySelector("form")
       if (form) {
@@ -71,7 +73,6 @@ export default function CountryWeatherApp() {
   }
 
   useEffect(() => {
-    // Load default country on mount
     setSelectedCountry("United States")
     setCountryData(mockCountryData["United States"])
   }, [])
@@ -79,7 +80,6 @@ export default function CountryWeatherApp() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
-        {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-white mb-2 flex items-center justify-center gap-3">
             <Globe className="text-blue-400" size={40} />
@@ -88,7 +88,6 @@ export default function CountryWeatherApp() {
           <p className="text-slate-300">Discover weather conditions across countries worldwide</p>
         </div>
 
-        {/* Search */}
         <Card className="mb-8 bg-white/10 backdrop-blur-md border-white/20">
           <CardContent className="p-6">
             <WeatherSearch
@@ -103,15 +102,12 @@ export default function CountryWeatherApp() {
           </CardContent>
         </Card>
 
-        {/* Loading State */}
         {isLoading && <WeatherLoading />}
 
-        {/* Country Weather Data */}
         {!isLoading && countryData && (
           <div className="space-y-6">
             <WeatherCountryHeader countryData={countryData} />
-            
-            {/* Cities Weather Grid */}
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {countryData.cities.map((city: any, index: number) => (
                 <WeatherCard key={index} city={city} />
@@ -120,7 +116,6 @@ export default function CountryWeatherApp() {
           </div>
         )}
 
-        {/* No Results */}
         {!isLoading && !countryData && (
           <WeatherNoResults
             availableCountries={availableCountries}
