@@ -41,8 +41,15 @@ pnpm run dev
 ## 📁 Folder Structure
 
 ```bash
-/components    # Reusable components (e.g., WeatherCard, CountrySelector)
-/data          # Mock weather data
-/pages         # Main routes (e.g., index.tsx)
+  components/
+    weather/
+      WeatherCard.tsx
+      WeatherIcon.tsx
+      WeatherSearch.tsx
+      WeatherCountryHeader.tsx
+      WeatherNoResults.tsx
+      WeatherLoading.tsx
+  app/
+    page.tsx
 ```
 
