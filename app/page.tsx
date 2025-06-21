@@ -1,10 +1,11 @@
-// import CountryWeatherApp from "@/components/countryWeatherApp";
+import CountryWeatherApp from "@/components/weather/countryWeatherApp";
+
 
 
 export default function Home() {
   return (
       <main>
-        {/* <CountryWeatherApp /> */}
+        <CountryWeatherApp />
       </main>
   );
 }
