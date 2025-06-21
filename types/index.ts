@@ -14,18 +14,26 @@ export interface WeatherCardProps {
   }
 }
 
-// City Weather (for reuse)
+//City Weather (for reuse)
 export interface CityWeather {
   name: string
   temperature: number
   condition: string
-  icon?: string
+  icon?: string | number | undefined
   humidity?: number
   windSpeed?: number
   pressure?: number
   visibility?: number
   high?: number
   low?: number
+}
+
+export interface CountryData {
+  name: string;
+  code: string;
+  flag: string;
+  timezone: string;
+  cities: CityWeather[];
 }
 
 // WeatherCountryHeader

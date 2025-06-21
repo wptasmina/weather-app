@@ -1,8 +1,9 @@
+import { CountryData } from "@/types";
 
 
 
 // Mock country weather data
-const mockCountryData = {
+const mockCountryData: Record<string, CountryData> = {
   "United States": {
     name: "United States",
     code: "US",
