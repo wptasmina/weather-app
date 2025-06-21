@@ -24,3 +24,10 @@ export interface WeatherCountryHeaderProps {
     cities: any[]
   }
 }
+
+//WeatherNoResults
+export interface WeatherNoResultsProps {
+  availableCountries: string[]
+  onSelectCountry: (country: string) => void
+  searchQuery: string
+}
