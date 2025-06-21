@@ -3,14 +3,33 @@
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 
+// interface WeatherCountryHeaderProps {
+//   countryData: {
+//     flag: string
+//     name: string
+//     code: string
+//     timezone: string
+//     cities: any[]
+//   }
+// }
+
+// After (good)
+interface City {
+  name: string;
+  temperature: number;
+  // ... other city fields
+}
+
+interface CountryData {
+  flag: string;
+  name: string;
+  code: string;
+  timezone: string;
+  cities: City[];
+}
+
 interface WeatherCountryHeaderProps {
-  countryData: {
-    flag: string
-    name: string
-    code: string
-    timezone: string
-    cities: any[]
-  }
+  countryData: CountryData; // ✅ Explicit type
 }
 
 export default function WeatherCountryHeader({ countryData }: WeatherCountryHeaderProps) {
