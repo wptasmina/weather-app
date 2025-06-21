@@ -1,4 +1,4 @@
-
+// WeatherCard
 export interface WeatherCardProps {
   city: {
     name: string
@@ -11,5 +11,16 @@ export interface WeatherCardProps {
     visibility: number
     high: number
     low: number
+  }
+}
+
+//WeatherCountryHeader
+export interface WeatherCountryHeaderProps {
+  countryData: {
+    flag: string
+    name: string
+    code: string
+    timezone: string
+    cities: any[]
   }
 }
