@@ -42,7 +42,7 @@ export default function WeatherSearch({
             </div>
           )}
         </div>
-        <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white" disabled={isLoading}>
+        <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white cursor-pointer" disabled={isLoading}>
           {isLoading ? "Searching..." : "Search"}
         </Button>
       </form>
