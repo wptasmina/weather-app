@@ -10,7 +10,7 @@ import WeatherNoResults from "@/components/weather/WeatherNoResults";
 import WeatherLoading from "@/components/weather/WeatherLoading";
 import mockCountryData from "@/data/mockCountryData";
 import WeatherCard from "./WeatherCard";
-import { CountryData, CityWeather } from "@/types/weather";
+import { CountryData } from "@/types/weather";
 
 // First, update your CountryData interface to be more specific
 
@@ -122,7 +122,7 @@ export default function CountryWeatherApp() {
             {/* Cities Weather Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {countryData.cities.map((city, index) => (
-                <WeatherCard key={index} city={city} />
+                <WeatherCard key={index} city={city} /> // Type is inferred automatically
               ))}
             </div>
           </div>
