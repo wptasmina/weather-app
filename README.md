@@ -1,11 +1,13 @@
 
+![weatherImg](https://github.com/user-attachments/assets/5e3636b8-56a5-4646-bf98-b0ce236aef98)
+
 # 🌤 Weather App
 
 A modern and responsive weather dashboard built using **React** and **Tailwind CSS**. It displays detailed weather data for multiple countries and cities using mock data.
 
 ## 🌐 Live Demo
 
-[Click here to view the live app](https://weather-app-websiet-45.vercel.app)
+[Click here to view the live app](https://weather-app-website-45.vercel.app)
 
 
 ## 📋 Project Overview
