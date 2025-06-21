@@ -7,7 +7,7 @@ A modern and responsive weather dashboard built using **React** and **Tailwind C
 
 ## 🌐 Live Demo
 
-[Click here to view the live app](https://weather-app-websiet-45.vercel.app)
+[Click here to view the live app](https://weather-app-website-45.vercel.app)
 
 
 ## 📋 Project Overview
