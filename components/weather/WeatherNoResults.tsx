@@ -1,20 +1,14 @@
-"use client"
-
-import { Globe } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
+import { Globe } from "lucide-react"
 import { WeatherNoResultsProps } from "@/types"
 
+const WeatherNoResults = ({ availableCountries, onSelectCountry, searchQuery }: WeatherNoResultsProps) => {
+  const isEmptySearch = searchQuery.trim() === ""
 
-
-export default function WeatherNoResults({
-  availableCountries,
-  onSelectCountry,
-  searchQuery,
-}: WeatherNoResultsProps) {
   return (
     <div className="text-center py-12">
       <Globe className="mx-auto text-slate-400 mb-4" size={64} />
-      {searchQuery === "" ? (
+      {isEmptySearch ? (
         <>
           <h3 className="text-xl font-semibold text-white mb-2">Search for a Country</h3>
           <p className="text-slate-300">Enter a country name to see weather conditions in major cities</p>
@@ -22,7 +16,7 @@ export default function WeatherNoResults({
       ) : (
         <>
           <h3 className="text-xl font-semibold text-white mb-2">Country Not Found</h3>
-          <p className="text-slate-300 mb-4">We couldn&apos;t find weather data for that country. Try searching for:</p>
+          <p className="text-slate-300 mb-4">Try one of these instead:</p>
           <div className="flex flex-wrap justify-center gap-2">
             {availableCountries.slice(0, 5).map((country) => (
               <Badge
@@ -40,3 +34,5 @@ export default function WeatherNoResults({
     </div>
   )
 }
+
+export default WeatherNoResults
