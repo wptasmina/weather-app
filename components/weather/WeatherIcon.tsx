@@ -2,7 +2,7 @@
 
 import { Sun, Cloud, CloudRain, CloudSnow } from "lucide-react"
 
-const WeatherIcon = ({ icon, size = 24 }: { icon: string; size?: number }) => {
+const WeatherIcon = ({ icon, size = 24 }: { icon: string | number | undefined; size?: number }) => {
   const iconMap = {
     sunny: Sun,
     "partly-cloudy": Cloud,

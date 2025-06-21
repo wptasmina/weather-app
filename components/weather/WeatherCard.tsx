@@ -3,21 +3,12 @@
 import { MapPin, Droplets, Wind, Gauge, Eye } from "lucide-react"
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card"
 import WeatherIcon from "./WeatherIcon"
+import { CityWeather } from "@/types"
 
 interface WeatherCardProps {
-  city: {
-    name: string
-    temperature: number
-    condition: string
-    icon: string
-    humidity: number
-    windSpeed: number
-    pressure: number
-    visibility: number
-    high: number
-    low: number
-  }
+  city: CityWeather
 }
+
 
 export default function WeatherCard({ city }: WeatherCardProps) {
   return (

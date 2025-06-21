@@ -9,7 +9,7 @@ import WeatherCountryHeader from "@/components/weather/WeatherCountryHeader";
 import WeatherNoResults from "@/components/weather/WeatherNoResults";
 import WeatherLoading from "@/components/weather/WeatherLoading";
 import mockCountryData from "@/data/mockCountryData";
-// import { CityWeather, CountryData } from "@/types";
+
 import WeatherCard from "./WeatherCard";
 import { CityWeather } from "@/types";
 

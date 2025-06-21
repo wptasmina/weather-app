@@ -1,4 +1,5 @@
-import { CountryData } from "@/types";
+import { CountryData } from "@/types/weather";
+
 
 
 
