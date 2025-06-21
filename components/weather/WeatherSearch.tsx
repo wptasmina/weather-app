@@ -3,16 +3,8 @@
 import { Search, Globe } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { WeatherSearchProps } from "@/types"
 
-interface WeatherSearchProps {
-  searchQuery: string
-  isLoading: boolean
-  searchResults: string[]
-  showSearchResults: boolean
-  onSearch: (e: React.FormEvent) => void
-  onSearchChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-  onSelectCountry: (country: string) => void
-}
 
 export default function WeatherSearch({
   searchQuery,
