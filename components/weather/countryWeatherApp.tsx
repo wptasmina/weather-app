@@ -9,30 +9,10 @@ import WeatherCountryHeader from "@/components/weather/WeatherCountryHeader";
 import WeatherNoResults from "@/components/weather/WeatherNoResults";
 import WeatherLoading from "@/components/weather/WeatherLoading";
 import mockCountryData from "@/data/mockCountryData";
-
 import WeatherCard from "./WeatherCard";
-import { CityWeather } from "@/types";
+import { CountryData, CityWeather } from "@/types/weather";
 
 // First, update your CountryData interface to be more specific
-// in src/types/weather.ts:
-interface CountryData {
-  name: string;
-  code: string;
-  flag: string;
-  timezone: string;
-  cities: Array<{
-    name: string;
-    temperature: number;
-    condition: string;
-    icon: string;
-    humidity: number;
-    windSpeed: number;
-    pressure: number;
-    visibility: number;
-    high: number;
-    low: number;
-  }>;
-}
 
 export default function CountryWeatherApp() {
   const [searchQuery, setSearchQuery] = useState("");
