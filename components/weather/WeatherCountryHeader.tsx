@@ -1,8 +1,19 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { WeatherCountryHeaderProps } from "@/types"
+"use client"
 
-const WeatherCountryHeader = ({ countryData }: WeatherCountryHeaderProps) => {
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent } from "@/components/ui/card"
+
+interface WeatherCountryHeaderProps {
+  countryData: {
+    flag: string
+    name: string
+    code: string
+    timezone: string
+    cities: any[]
+  }
+}
+
+export default function WeatherCountryHeader({ countryData }: WeatherCountryHeaderProps) {
   return (
     <Card className="bg-white/10 backdrop-blur-md border-white/20">
       <CardContent className="p-6">
@@ -24,5 +35,3 @@ const WeatherCountryHeader = ({ countryData }: WeatherCountryHeaderProps) => {
     </Card>
   )
 }
-
-export default WeatherCountryHeader
